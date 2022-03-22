@@ -18,8 +18,8 @@ public class MainPageTests extends TestBase {
     @Description("Main UI Checks")
     @DisplayName("Work Title test")
     void workTitleTest() {
-        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
-            open("https://www.aperto.com/aperto/de");
+        step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
+            open("https://www.aperto.com/de");
             SelenideElement accept = $("#uc-btn-accept-banner");
             accept.click();
         });
@@ -30,7 +30,7 @@ public class MainPageTests extends TestBase {
         });
 
         step("Click on the work title", () -> {
-            SelenideElement work = $(".headline", 2);
+            SelenideElement work = $("ul.level-1 li", 2);
             work.shouldHave(Condition.text("Work")).click();
         });
 
@@ -44,8 +44,8 @@ public class MainPageTests extends TestBase {
     @Description("Main UI Checks")
     @DisplayName("Blog Title test")
     void blogTitleTest() {
-        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
-            open("https://www.aperto.com/aperto/de");
+        step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
+            open("https://www.aperto.com/de");
             SelenideElement accept = $("#uc-btn-accept-banner");
             accept.click();
         });
@@ -70,8 +70,8 @@ public class MainPageTests extends TestBase {
     @Description("Main UI Checks")
     @DisplayName("Service Title test")
     void serviceTitleTest() {
-        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
-            open("https://www.aperto.com/aperto/de");
+        step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
+            open("https://www.aperto.com/de");
             SelenideElement accept = $("#uc-btn-accept-banner");
             accept.click();
         });
@@ -96,8 +96,8 @@ public class MainPageTests extends TestBase {
     @Description("Main UI Checks")
     @DisplayName("Job page title tst")
     void qaJobTest() {
-        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
-            open("https://www.aperto.com/aperto/de");
+        step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
+            open("https://www.aperto.com/de");
             SelenideElement accept = $("#uc-btn-accept-banner");
             accept.click();
         });
@@ -127,8 +127,8 @@ public class MainPageTests extends TestBase {
     @Description("Main UI Checks")
     @DisplayName("Berlin address check")
     void berlinAddressCheck() {
-        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
-            open("https://www.aperto.com/aperto/de");
+        step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
+            open("https://www.aperto.com/de");
             SelenideElement accept = $("#uc-btn-accept-banner");
             accept.click();
         });
@@ -149,8 +149,8 @@ public class MainPageTests extends TestBase {
     @Description("Main UI Checks")
     @DisplayName("Zurich address check")
     void zurichAddressCheck() {
-        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
-            open("https://www.aperto.com/aperto/de");
+        step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
+            open("https://www.aperto.com/de");
             SelenideElement accept = $("#uc-btn-accept-banner");
             accept.click();
         });
@@ -172,8 +172,8 @@ public class MainPageTests extends TestBase {
     @Description("Page title check")
     @DisplayName("Page title should have header text")
     void titleTest() {
-        step("Open url 'https://www.aperto.com/aperto/de'", () ->
-            open("https://www.aperto.com/aperto/de"));
+        step("Open url 'https://www.aperto.com/de'", () ->
+            open("https://www.aperto.com/de"));
 
         step("Page title should have text 'Aperto | A Leading Digital Agency'", () -> {
             String expectedTitle = "Aperto | A Leading Digital Agency";
@@ -187,8 +187,8 @@ public class MainPageTests extends TestBase {
     @Description("Page console check")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-        step("Open url 'https://www.aperto.com/aperto/de'", () ->
-            open("https://www.aperto.com/aperto/de"));
+        step("Open url 'https://www.aperto.com/de'", () ->
+            open("https://www.aperto.com/de"));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
