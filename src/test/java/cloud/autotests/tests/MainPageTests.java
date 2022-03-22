@@ -83,12 +83,12 @@ public class MainPageTests extends TestBase {
 
         step("Click on the Service title", () -> {
             SelenideElement work = $("ul.level-1 li", 1);
-            work.shouldHave(Condition.text("blog")).click();
+            work.shouldHave(Condition.text("Service")).click();
         });
 
         step("Check if the Service page is open", () -> {
             SelenideElement blogTitle = $("h1.title");
-            blogTitle.shouldHave(Condition.text("Service"));
+            blogTitle.shouldHave(Condition.text("Services"));
         });
     }
 
