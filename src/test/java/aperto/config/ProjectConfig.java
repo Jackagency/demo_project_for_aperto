@@ -1,4 +1,4 @@
-package cloud.autotests.config;
+package aperto.config;
 
 import org.aeonbits.owner.Config;
 

@@ -1,6 +1,6 @@
-package cloud.autotests.tests;
+package aperto.tests;
 
-import cloud.autotests.helpers.DriverUtils;
+import aperto.helpers.DriverUtils;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Description;
