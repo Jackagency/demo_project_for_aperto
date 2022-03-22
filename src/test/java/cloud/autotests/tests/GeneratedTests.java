@@ -42,6 +42,58 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @DisplayName("Blog Title test")
+    void blogTitleTest() {
+        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
+            open("https://www.aperto.com/aperto/de");
+            SelenideElement accept = $("#uc-btn-accept-banner");
+            accept.click();
+        });
+
+        step("Open toggle", () -> {
+            SelenideElement toggle = $(".toggle-main-nav .inner");
+            toggle.click();
+        });
+
+        step("Click on the blog title", () -> {
+            SelenideElement work = $("ul.level-1 li", 4);
+            work.shouldHave(Condition.text("blog")).click();
+        });
+
+        step("Check if the Blog page is open", () -> {
+            SelenideElement blogTitle = $("h1.title");
+            blogTitle.shouldHave(Condition.text("Blog"));
+        });
+    }
+
+    @Test
+    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @DisplayName("Service Title test")
+    void serviceTitleTest() {
+        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
+            open("https://www.aperto.com/aperto/de");
+            SelenideElement accept = $("#uc-btn-accept-banner");
+            accept.click();
+        });
+
+        step("Open toggle", () -> {
+            SelenideElement toggle = $(".toggle-main-nav .inner");
+            toggle.click();
+        });
+
+        step("Click on the Service title", () -> {
+            SelenideElement work = $("ul.level-1 li", 1);
+            work.shouldHave(Condition.text("blog")).click();
+        });
+
+        step("Check if the Service page is open", () -> {
+            SelenideElement blogTitle = $("h1.title");
+            blogTitle.shouldHave(Condition.text("Service"));
+        });
+    }
+
+    @Test
+    @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("Aperto main page test")
     void qaJobTest() {
         step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
@@ -74,7 +126,7 @@ public class GeneratedTests extends TestBase {
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("Berlin address check")
-    void yogaClassCheck() {
+    void berlinAddressCheck() {
         step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
             open("https://www.aperto.com/aperto/de");
             SelenideElement accept = $("#uc-btn-accept-banner");
@@ -89,6 +141,28 @@ public class GeneratedTests extends TestBase {
         step("Check Berlin address", () -> {
             SelenideElement berlinAddress = $("div:nth-child(1) > div > div > div.rich-text-content");
             berlinAddress.shouldHave(Condition.text("Chausseestraße 5"));
+        });
+
+    }
+
+    @Test
+    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @DisplayName("Berlin address check")
+    void zurichAddressCheck() {
+        step("Open 'https://www.aperto.com/aperto/de' and accept cookies", () -> {
+            open("https://www.aperto.com/aperto/de");
+            SelenideElement accept = $("#uc-btn-accept-banner");
+            accept.click();
+        });
+
+        step("Click Kontakt button", () -> {
+            SelenideElement kontaktButton = $("#skrollr-body nav a");
+            kontaktButton.scrollIntoView(true).click();
+        });
+
+        step("Check Berlin address", () -> {
+            SelenideElement berlinAddress = $("div:nth-child(2 > div > div > div.rich-text-content");
+            berlinAddress.shouldHave(Condition.text("Vulkanstrasse 106"));
         });
 
     }
