@@ -19,19 +19,17 @@
 
 ## :earth_africa: Covered functionality
 
-> Разработаны автотесты на <code>UI</code>.
+> UI autotests developed <code>UI</code>.
 ### UI
 
-- [x] Проверка отображения страницы поиска товаров
-- [x] Отсутствие ошибок в журнале консоли страницы
-- [x] Проверка количества найденного товара
-- [x] Проверка списка брендов
-- [x] Проверка фильтра товаров
-- [x] Проверка ошибки "По Вашему запросу ничего не найдено"
-- [x] Проверка ошибки "Извините, не удалось обработать ваш запрос."
-- [x] Проверка отображения картинки при неправильном запросе
-- [x] Проверка поиска большого значения
-- [x] Проверка смешанного типа запроса
+- [x] Work page title test
+- [x] No errors in page console log
+- [x] Page title should have header text
+- [x] Blog page title test
+- [x] Service page title test
+- [x] Job page title test
+- [x] Berlin office address information verification
+- [x] Zurich office address information verification
 
 ## :classical_building: Technology stack
 
@@ -48,23 +46,24 @@
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
- В данном проекте автотесты написаны на <code>Java</code> с использованием <code>Selenide</code> для UI-тестов.
+ In this project, autotests are written in <code>Java</code> using <code>Selenide</code> for UI tests.
 >
-> <code>Selenoid</code> выполняет запуск браузеров в контейнерах <code>Docker</code>.
+> <code>Selenoid</code> launches browsers in <code>Docker</code> containers.
 >
-> <code>Allure Report</code> формирует отчет о запуске тестов.
+> <code>Allure Report</code> generates a test run report.
 >
-> Для автоматизированной сборки проекта используется <code>Gradle</code>.
+> <code>Gradle</code> is used for automated project build.
 >
-> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.
+> <code>JUnit 5</code> is used as a unit testing library.
 >
-> <code>Jenkins</code> выполняет запуск тестов.
-> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
+> <code>Jenkins</code> runs the tests.
+> 
+> After the run is completed, notifications are sent using the bot to <code>Telegram</code>.
 
 
 ## Running tests from the terminal
 
-### :robot: Локальный запуск тестов
+### :robot: Running Tests Locally
 
 ```
 gradle clean test
@@ -84,15 +83,15 @@ test
 -Dthreads=${THREADS}
 ```
 
-### :robot: Параметры сборки
+### :robot: Build Options
 
-> <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
+> <code>REMOTE_URL</code> – the address of the remote server where the tests will run.
 >
-> <code>BROWSER</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
+> <code>BROWSER</code> – the browser the tests will be run (_default - <code>chrome</code>_).
 >
-> <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты (_по умолчанию - <code>91.0</code>_).
+> <code>BROWSER_VERSION</code> – version of the browser the tests will be run (_default - <code>91.0</code>_).
 >
-> <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
+> <code>BROWSER_SIZE</code> – the size of the browser window the tests will be run (_default - <code>1920x1080</code>_).
 
 
 
@@ -102,14 +101,14 @@ test
 <img title="Allure Overview" src="images/screens/allure_overview.png">
 </p>
 
-### :eye_speech_bubble: Группировка тестов по проверяемому функционалу
+### :eye_speech_bubble: Grouping tests by tested functionality
 
 <p align="center">
 <img title="Allure Behaviors" src="images/screens/allure_behaviors.png">
 </p>
 
 
-### :frog: Основной дашборд
+### :frog: Main dashboard
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/allure_overview_dashboard.png">
@@ -118,7 +117,7 @@ test
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications using a bot
 
-> После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне.
+> After the build is completed, a special bot created in <code>Telegram</code> automatically processes and sends a message with a run report.
 
 <p align="center">
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
@@ -126,7 +125,7 @@ test
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> An example of running a test in Selenoid]
 
-> К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+> A video is attached to each test in the report. One of these videos is shown below.
 <p align="center">
   <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
 </p>
