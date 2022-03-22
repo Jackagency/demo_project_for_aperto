@@ -1,14 +1,16 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
+
 
 
 public class GeneratedTests extends TestBase {
@@ -17,7 +19,15 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Aperto main page test")
     void generatedTest() {
         step("Open 'https://www.aperto.com/aperto/de'", () -> {
-            step("// todo: just add selenium action");
+            open("https://www.aperto.com/aperto/de");
+            SelenideElement toggle = $(".toggle-main-nav .inner");
+            SelenideElement work = $("nav.b-nav.is-main-nav ul:nth-child(2) li:nth-child(3) a");
+            SelenideElement accept = $("#uc-btn-accept-banner");
+            accept.click();
+            toggle.click();
+            work.shouldHave(Condition.text("Work"));
+            work.click();
+
         });
 
         step("Set", () -> {
@@ -31,6 +41,12 @@ public class GeneratedTests extends TestBase {
         step("Submit", () -> {
             step("// todo: just add selenium action");
         });
+    }
+    @Test
+    void test1() {
+        open("https://www.aperto.com/aperto/de");
+        $("#uc-btn-accept-banner").click();
+        $(".headline", 2).click();
     }
 
     @Test
