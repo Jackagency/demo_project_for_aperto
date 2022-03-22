@@ -1,23 +1,23 @@
 #King test automation project
 
-## :cherry_blossom:	Content
+## :page_with_curl:	Content
 
-> ➠ [Covered functionality](#earth_africa-covered-functionality)
+> :heavy_check_mark: [Covered functionality](#earth_africa-covered-functionality)
 >
-> ➠ [Technology stack](#classical_building-technology-stack)
+> :heavy_check_mark: [Technology stack](#classical_building-technology-stack)
 >
-> ➠ [Running tests from the terminal](#running-tests-from-the-terminal)
+> :heavy_check_mark: [Running tests from the terminal](#running-tests-from-the-terminal)
 >
-> ➠ [Running Tests in Jenkins](#robot-remote-test-running)
+> :heavy_check_mark: [Running Tests in Jenkins](#robot-remote-test-running)
 >
-> ➠ [Test results report in Allure Report](#skier-main-page-of-allure-report)
+> :heavy_check_mark: [Test results report in Allure Report](#skier-main-page-of-allure-report)
 >
-> ➠ [Telegram notifications using a bot](#-telegram-notifications-using-a-bot)
+> :heavy_check_mark: [Telegram notifications using a bot](#-telegram-notifications-using-a-bot)
 >
-> ➠ [An example of running a test in Selenoid](#-an-example-of-running-a-test-in-selenoid)
+> :heavy_check_mark: [An example of running a test in Selenoid](#-an-example-of-running-a-test-in-selenoid)
 
 
-## :earth_africa: Covered functionality
+## :technologist: Covered functionality
 
 > UI autotests developed <code>UI</code>.
 ### UI
@@ -95,20 +95,20 @@ test
 
 
 
-### :skier: Main page of Allure-report
+### :pushpin: Main page of Allure-report
 
 <p align="center">
 <img title="Allure Overview" src="images/screens/allure_overview.png">
 </p>
 
-### :eye_speech_bubble: Grouping tests by tested functionality
+### :pushpin: Grouping tests by tested functionality
 
 <p align="center">
 <img title="Allure Behaviors" src="images/screens/allure_behaviors.png">
 </p>
 
 
-### :frog: Main dashboard
+### :pushpin: Main dashboard
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/allure_overview_dashboard.png">
