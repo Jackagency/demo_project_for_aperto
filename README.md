@@ -123,7 +123,7 @@ test
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
 </p>
 
-## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> An example of running a test in Selenoid]
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> An example of running a test in Selenoid
 
 > A video is attached to each test in the report. One of these videos is shown below.
 <p align="center">
