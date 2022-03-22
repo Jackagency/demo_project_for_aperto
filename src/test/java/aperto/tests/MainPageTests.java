@@ -2,7 +2,6 @@ package aperto.tests;
 
 import aperto.helpers.DriverUtils;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,23 +19,19 @@ public class MainPageTests extends TestBase {
     void workTitleTest() {
         step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
             open("https://www.aperto.com/de");
-            SelenideElement accept = $("#uc-btn-accept-banner");
-            accept.click();
+            $("#uc-btn-accept-banner").click();
         });
 
         step("Open toggle", () -> {
-            SelenideElement toggle = $(".toggle-main-nav .inner");
-            toggle.click();
+            $(".toggle-main-nav .inner").click();
         });
 
         step("Click on the work title", () -> {
-            SelenideElement work = $("ul.level-1 li", 2);
-            work.shouldHave(Condition.text("Work")).click();
+            $("ul.level-1 li", 2).shouldHave(Condition.text("Work")).click();
         });
 
         step("Check if the Work page is open", () -> {
-           SelenideElement workTitle = $("h1.title");
-           workTitle.shouldHave(Condition.text("Work"));
+           $("h1.title").shouldHave(Condition.text("Work"));
         });
     }
 
@@ -46,23 +41,19 @@ public class MainPageTests extends TestBase {
     void blogTitleTest() {
         step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
             open("https://www.aperto.com/de");
-            SelenideElement accept = $("#uc-btn-accept-banner");
-            accept.click();
+            $("#uc-btn-accept-banner").click();
         });
 
         step("Open toggle", () -> {
-            SelenideElement toggle = $(".toggle-main-nav .inner");
-            toggle.click();
+            $(".toggle-main-nav .inner").click();
         });
 
         step("Click on the blog title", () -> {
-            SelenideElement work = $("ul.level-1 li", 4);
-            work.shouldHave(Condition.text("blog")).click();
+            $("ul.level-1 li", 4).shouldHave(Condition.text("blog")).click();
         });
 
         step("Check if the Blog page is open", () -> {
-            SelenideElement blogTitle = $("h1.title");
-            blogTitle.shouldHave(Condition.text("Blog"));
+            $("h1.title").shouldHave(Condition.text("Blog"));
         });
     }
 
@@ -72,54 +63,45 @@ public class MainPageTests extends TestBase {
     void serviceTitleTest() {
         step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
             open("https://www.aperto.com/de");
-            SelenideElement accept = $("#uc-btn-accept-banner");
-            accept.click();
+            $("#uc-btn-accept-banner").click();
         });
 
         step("Open toggle", () -> {
-            SelenideElement toggle = $(".toggle-main-nav .inner");
-            toggle.click();
+            $(".toggle-main-nav .inner").click();
         });
 
         step("Click on the Service title", () -> {
-            SelenideElement work = $("ul.level-1 li", 1);
-            work.shouldHave(Condition.text("Service")).click();
+            $("ul.level-1 li", 1).shouldHave(Condition.text("Service")).click();
         });
 
         step("Check if the Service page is open", () -> {
-            SelenideElement blogTitle = $("h1.title");
-            blogTitle.shouldHave(Condition.text("Services"));
+            $("h1.title").shouldHave(Condition.text("Services"));
         });
     }
 
     @Test
     @Description("Main UI Checks")
-    @DisplayName("Job page title tst")
+    @DisplayName("Job page title test")
     void qaJobTest() {
         step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
             open("https://www.aperto.com/de");
-            SelenideElement accept = $("#uc-btn-accept-banner");
-            accept.click();
+            $("#uc-btn-accept-banner").click();
         });
 
         step("Open toggle", () -> {
-            SelenideElement toggle = $(".toggle-main-nav .inner");
-            toggle.click();
+            $(".toggle-main-nav .inner").click();
         });
 
         step("Click on the Karriere title", () -> {
-            SelenideElement karriere = $("ul.level-1 li", 5);
-            karriere.shouldHave(Condition.text("Karriere")).click();
+            $("ul.level-1 li", 5).shouldHave(Condition.text("Karriere")).click();
         });
 
         step("Click on the Finde hier deine Stelle! link", () -> {
-            SelenideElement findYourJobLink = $("div:nth-child(1) li a");
-            findYourJobLink.shouldHave(Condition.text("Finde hier deine Stelle!")).click();
+            $("div:nth-child(1) li a").shouldHave(Condition.text("Finde hier deine Stelle!")).click();
         });
 
         step("Check the info Title", () -> {
-            SelenideElement infoTitle = $(".intro");
-            infoTitle.shouldHave(Condition.text("Arbeiten bei Aperto, dem IBM iX Studio Berlin"));
+            $(".intro").shouldHave(Condition.text("Arbeiten bei Aperto, dem IBM iX Studio Berlin"));
         });
     }
 
@@ -129,18 +111,15 @@ public class MainPageTests extends TestBase {
     void berlinAddressCheck() {
         step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
             open("https://www.aperto.com/de");
-            SelenideElement accept = $("#uc-btn-accept-banner");
-            accept.click();
+            $("#uc-btn-accept-banner").click();
         });
 
         step("Click Kontakt button", () -> {
-            SelenideElement kontaktButton = $("#skrollr-body nav a");
-            kontaktButton.scrollIntoView(true).click();
+            $("#skrollr-body nav a").scrollIntoView(true).click();
         });
 
         step("Check Berlin address", () -> {
-            SelenideElement berlinAddress = $("div:nth-child(1) > div > div > div.rich-text-content");
-            berlinAddress.shouldHave(Condition.text("Chausseestraße 5"));
+            $("div:nth-child(1) > div > div > div.rich-text-content").shouldHave(Condition.text("Chausseestraße 5"));
         });
 
     }
@@ -151,18 +130,15 @@ public class MainPageTests extends TestBase {
     void zurichAddressCheck() {
         step("Open 'https://www.aperto.com/de' and accept cookies", () -> {
             open("https://www.aperto.com/de");
-            SelenideElement accept = $("#uc-btn-accept-banner");
-            accept.click();
+            $("#uc-btn-accept-banner").click();
         });
 
         step("Click Kontakt button", () -> {
-            SelenideElement kontaktButton = $("#skrollr-body nav a");
-            kontaktButton.scrollIntoView(true).click();
+            $("#skrollr-body nav a").scrollIntoView(true).click();
         });
 
         step("Check Berlin address", () -> {
-            SelenideElement berlinAddress = $("div:nth-child(2 > div > div > div.rich-text-content");
-            berlinAddress.shouldHave(Condition.text("Vulkanstrasse 106"));
+            $("div:nth-child(2 > div > div > div.rich-text-content").shouldHave(Condition.text("Vulkanstrasse 106"));
         });
 
     }
