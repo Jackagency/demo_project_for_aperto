@@ -168,9 +168,11 @@ public class MainPageTests extends TestBase {
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
-            String errorText = "SEVERE";
+            String severeText = "SEVERE";
+            String errorText = "Error";
+            String failedText = "Failed";
 
-            assertThat(consoleLogs).doesNotContain(errorText);
+            assertThat(consoleLogs).doesNotContain(severeText, errorText, failedText);
         });
     }
 }
