@@ -70,6 +70,7 @@ gradle clean test
 ```
 
 ### :robot: Remote test running
+## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-760/"> job </a>
 
 ```
 clean
@@ -95,7 +96,7 @@ test
 
 
 
-### :pushpin: Main page of Allure-report
+### :pushpin: Main page of <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-760/18/allure/">Allure-report</a>
 
 <p align="center">
 <img title="Allure Overview" src="images/screens/allure_overview.png">
