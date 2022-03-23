@@ -96,7 +96,7 @@ test
 
 
 
-### :pushpin: Main page of <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-760/18/allure/">Allure-report</a>
+### :pushpin: Main page of <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-760/30/allure/">Allure-report</a>
 
 <p align="center">
 <img title="Allure Overview" src="images/screens/allure_overview.png">
