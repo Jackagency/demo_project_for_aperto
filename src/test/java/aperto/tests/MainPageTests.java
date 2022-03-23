@@ -137,8 +137,8 @@ public class MainPageTests extends TestBase {
             $("#skrollr-body nav a").scrollIntoView(true).click();
         });
 
-        step("Check Berlin address", () -> {
-            $("div:nth-child(2 > div > div > div.rich-text-content").shouldHave(Condition.text("Vulkanstrasse 106"));
+        step("Check Zurich address", () -> {
+            $("div:nth-child(2) > div > div > div.rich-text-content").shouldHave(Condition.text("Vulkanstrasse 106"));
         });
 
     }
